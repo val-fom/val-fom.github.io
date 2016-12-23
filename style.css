@@ -1,3 +1,18 @@
 body {
 	font-family: 'PT Sans', sans-serif;
+	background-color: rgba(33, 33, 33, 1.0); /*#212121*/
+	color: #ffffff;
+	padding: 0;
+	margin: 0;
 }
+
+header {
+	min-height: 240px;
+	box-shadow: 0 0 0 5px #rgba(1, 1, 1, 1.0);
+}
+
+div.column-960 {
+	width: 960px;
+	margin: 0 auto;
+}
+
