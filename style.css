@@ -11,8 +11,17 @@ header {
 	box-shadow: 0 0 0 5px #rgba(1, 1, 1, 1.0);
 }
 
+header h1 {
+	margin: 50px 0;
+	font-size: 40px;
+	text-align: right;
+}
+
 div.column-960 {
 	width: 960px;
 	margin: 0 auto;
 }
 
+header  p {
+	width: 640px;
+}
