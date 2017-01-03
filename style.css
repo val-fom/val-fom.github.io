@@ -29,9 +29,7 @@ header h1 a {
 }
 
 @keyframes sliding-in {
-	from { 
-		transform: translateX(300px); 
-	}
+	from { transform: translateX(300px); }
 	to {  }
 }
 
