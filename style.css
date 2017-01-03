@@ -15,6 +15,26 @@ header h1 {
 	margin: 50px 0;
 	font-size: 40px;
 	text-align: right;
+	-webkit-animation: sliding-in 1s;
+	-o-animation: sliding-in 1s;
+	animation: sliding-in 1s;
+}
+
+@-webkit-keyframes sliding-in {
+	from { transform: translateX(300px); }
+	to {  }
+}
+@-o-keyframes sliding-in {
+	from { transform: translateX(300px); }
+	to {  }
+}
+@-moz-keyframes sliding-in {
+	from { transform: translateX(300px); }
+	to {  }
+}
+@keyframes sliding-in {
+	from { transform: translateX(300px); }
+	to {  }
 }
 
 div.column-960 {
