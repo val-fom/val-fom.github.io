@@ -15,25 +15,20 @@ header h1 {
 	margin: 50px 0;
 	font-size: 40px;
 	text-align: right;
-	-webkit-animation: sliding-in 1s;
-	-o-animation: sliding-in 1s;
-	animation: sliding-in 1s;
+	animation:
+		sliding-in 1s,
+		bliming 5s infinite;
 }
 
-@-webkit-keyframes sliding-in {
-	from { transform: translateX(300px); }
-	to {  }
-}
-@-o-keyframes sliding-in {
-	from { transform: translateX(300px); }
-	to {  }
-}
-@-moz-keyframes sliding-in {
-	from { transform: translateX(300px); }
-	to {  }
-}
 @keyframes sliding-in {
 	from { transform: translateX(300px); }
+	to {  }
+}
+
+@keyframes bliming {
+	from {  }
+	90% { opacity: 1;  }
+	95% { opacity: 0.5; }
 	to {  }
 }
 
