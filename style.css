@@ -18,16 +18,26 @@ header h1 {
 	animation:
 		sliding-in 1s,
 		bliming 5s infinite;
+	text-shadow:
+		0 0 40px #000000, 
+		0 0 50px #ffffff;
+}
+
+header h1 a {
+	text-decoration: none;
+	color: inherit;
 }
 
 @keyframes sliding-in {
-	from { transform: translateX(300px); }
+	from { 
+		transform: translateX(300px); 
+	}
 	to {  }
 }
 
 @keyframes bliming {
 	from {  }
-	90% { opacity: 1;  }
+	90% { opacity: 1; }
 	95% { opacity: 0.5; }
 	to {  }
 }
