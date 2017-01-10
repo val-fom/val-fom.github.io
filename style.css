@@ -8,16 +8,18 @@ body {
 
 header {
 	min-height: 240px;
-	box-shadow: 0 0 0 5px #rgba(1, 1, 1, 1.0);
 }
 
 header h1 {
 	margin: 50px 0;
 	font-size: 40px;
 	text-align: right;
-	animation:
-		sliding-in 1s,
-		bliming 5s infinite;
+	animation-name:
+		sliding-in,
+		appearance,
+		blinking;
+	animation-duration: 1s, 3s, 4s;
+	animation-iteration-count: 1, 1, infinite;
 	text-shadow:
 		0 0 40px #000000, 
 		0 0 50px #ffffff;
@@ -30,14 +32,15 @@ header h1 a {
 
 @keyframes sliding-in {
 	from { transform: translateX(300px); }
-	to {  }
 }
 
-@keyframes bliming {
-	from {  }
+@keyframes blinking {
 	90% { opacity: 1; }
 	95% { opacity: 0.5; }
-	to {  }
+}
+
+@keyframes appearance {
+	from { opacity: 0; }
 }
 
 div.column-960 {
@@ -47,4 +50,28 @@ div.column-960 {
 
 header  p {
 	width: 640px;
+}
+
+header a {
+	position: relative;
+}
+
+header a::after {
+	background-color: #ffffff;
+	opacity: 0;
+	transition: all 1s;
+}
+
+header a:hover::after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	opacity: 1;
+}
+
+header h1:active {
+	transform: translate(1px, 1px);
 }
