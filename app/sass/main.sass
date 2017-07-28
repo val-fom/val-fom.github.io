@@ -1,0 +1,97 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	background-color: rgba(33, 33, 33, 1)
+	color: #ffffff
+	padding: 0
+	margin: 0
+
+header
+	min-height: 240px
+	h1
+		margin: 50px 0
+		font-size: 40px
+		text-align: right
+		animation-name: sliding-in, appearance, blinking
+		animation-duration: 1s, 3s, 4s
+		animation-iteration-count: 1, 1, infinite
+		text-shadow: 0 0 40px #000000,  0 0 50px #ffffff
+
+@keyframes sliding-in
+	from
+		transform: translateX(300px)
+
+
+@keyframes blinking
+	90%
+		opacity: 1
+
+	95%
+		opacity: 0.5
+
+@keyframes appearance
+	from
+		opacity: 0
+
+header
+	a
+		text-decoration: none
+		color: inherit
+		position: relative
+		&:after
+			background-color: #ffffff
+			opacity: 0
+			transition: all 1s
+		&:hover
+			color: #ffffff
+			text-decoration: none
+		&:hover::after
+			content: ''
+			position: absolute
+			top: 100%
+			left: 0
+			width: 100%
+			height: 2px
+			opacity: 1
+	h1:active
+		transform: translate(1px, 1px)
+
+
+
+
+@import "media" // Всегда в конце
