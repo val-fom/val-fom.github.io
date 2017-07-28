@@ -56,7 +56,7 @@ header a {
 	position: relative;
 }
 
-header a::after {
+header a:after {
 	background-color: #ffffff;
 	opacity: 0;
 	transition: all 1s;
